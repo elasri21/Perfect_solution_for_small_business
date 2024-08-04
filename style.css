@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --main-bg: #F2F5F9;
+    --white: #fff;
+    --dark: #111729;
+    --grey: #677489;
+
+    --body-family: "Lato", sans-serif;
+    --title-family: "Poppins", sans-serif;
+
+    --body-size: 16px;
+    --title-size: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--body-size);
+    font-family: var(--body-family);
+    background-color: var(--main-bg);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 500px) {
+    main {
+        width: 418px !important;
+    }
+}
+
+main {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    width: calc(100% - 60px);
+    margin: 0 auto;
+}
+header {
+    position: relative;
+}
+header img {
+    display: block;
+    width: 100%;
+}
+header .wavy {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+}
+
+section {
+    padding: 0 20px 30px 20px;
+}
+section .content h1 {
+    font-size: var(--title-size);
+    font-family: var(--title-family);
+    color: var(--dark);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+section p {
+    font-size: var(--body-size);
+    color: var(--grey);
+    font-weight: 400;
+    line-height: 20px;
+}
+
+section .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 30px;
+   position: relative;
+}
+section .profile::before {
+    content: "";
+    width: calc(100% + 60px);
+    height: 1px;
+    background-color: var(--main-bg);
+    position: absolute;
+    left: -30px;
+    top: 0;
+}
+
+section .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+section .profile h2 {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: var(--dark);
+    font-family: var(--title-family);
+    font-weight: 600;
+}
